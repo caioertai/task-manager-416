@@ -1,11 +1,12 @@
 # Managing (the process to complete) user actions
+require_relative "tasks_view"
 require_relative "task"
 
 class TasksController
   # Data
-  def initialize(task_repository, tasks_view)
+  def initialize(task_repository)
     @task_repository = task_repository
-    @tasks_view = tasks_view
+    @tasks_view = TasksView.new
   end
 
   # Behavior
